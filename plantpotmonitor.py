@@ -17,6 +17,7 @@ yellow2 = 15
 print "Setting up GPIO"
 
 GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
 GPIO.setup(red1, GPIO.OUT)
 GPIO.setup(yellow1, GPIO.OUT)
 GPIO.setup(green1, GPIO.OUT)
@@ -24,15 +25,7 @@ GPIO.setup(red2, GPIO.OUT)
 GPIO.setup(yellow2, GPIO.OUT)
 GPIO.setup(green2, GPIO.OUT)
 
-
-# define led function
-#def enable_led(should_enable):
-#	if should_enable:
-#		GPIO.output(led_pin, True)
-#	else:
-#		GPIO.output(led_pin, False)
-
-
+#Main Loop
 while True:
 
     # read moisture sensors
